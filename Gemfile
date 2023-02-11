@@ -45,6 +45,10 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "sassc-rails"
 
+# cloudinary
+gem "cloudinary"
+
+# twilio
 gem "twilio-ruby"
 
 
