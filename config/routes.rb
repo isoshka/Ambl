@@ -5,4 +5,19 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  get "/settings", to: "user#settings"
+  resources :users, only: :update
+
+  resources :interests, only: [:index]
+
+  resources :bookmarks, only: [:create]
+
+  resources :notifications, only: [:create, :show]
+
+  resources :places, only: [] do
+    member do
+      get :directions
+    end
+  end
 end
