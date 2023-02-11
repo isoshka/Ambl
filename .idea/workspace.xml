@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="135163fa-d262-4d38-a3a8-d1645ace62e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="fff0de61-2134-4328-a8dd-b109dd4caa93" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Ambl.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d/storage_v2/_src_/database/Ambl_development.EnwpbA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0adf2b0a-bd3c-4796-9045-0793f42abf8d/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +29,8 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2LVEgONUJCnDjGeIoXCpql0HAiR" />
+  <component name="ProjectId" id="2LZqIB5n4LXHxKOLRcLyFoIGLXM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,6 +45,11 @@
     "nodejs_package_manager_path": "yarn",
     "ruby.rails.projectView.checked": "true",
     "settings.editor.selected.configurable": "application.passwordSafe"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Rails.Development: Ambl">
@@ -143,13 +163,12 @@
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="135163fa-d262-4d38-a3a8-d1645ace62e0" name="Changes" comment="" />
-      <created>1675947959933</created>
+      <changelist id="fff0de61-2134-4328-a8dd-b109dd4caa93" name="Changes" comment="" />
+      <created>1676088871310</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1675947959933</updated>
-      <workItem from="1675947962034" duration="132000" />
-      <workItem from="1676078655990" duration="1238000" />
+      <updated>1676088871310</updated>
+      <workItem from="1676088874196" duration="648000" />
     </task>
     <servers />
   </component>
