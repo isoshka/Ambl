@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 puts "Destroying all users"
 User.destroy_all
 puts "Destroying all places"
@@ -24,8 +25,9 @@ User.create!(
   two_hours: false,
   one_hundred_metres: true,
   five_hundred_metres: false,
-  one_kilometer: false
-)
+  one_kilometer: false,
+  phone_number: '+61401788039',
+).photo.attach(io: File.open('app/assets/images/sam.jpg'), filename: 'sam.jpg', content_type: 'image/jpg')
 
 User.create!(
   email: 'james@email.com',
@@ -35,8 +37,9 @@ User.create!(
   two_hours: false,
   one_hundred_metres: true,
   five_hundred_metres: false,
-  one_kilometer: false
-)
+  one_kilometer: false,
+  phone_number: '+818035702607',
+).photo.attach(io: File.open('app/assets/images/james.jpg'), filename: 'james.jpg', content_type: 'image/jpg')
 
 User.create!(
   email: 'isabel@email.com',
@@ -46,8 +49,9 @@ User.create!(
   two_hours: false,
   one_hundred_metres: true,
   five_hundred_metres: false,
-  one_kilometer: false
-)
+  one_kilometer: false,
+  phone_number: '+817083931377',
+).photo.attach(io: File.open('app/assets/images/isabel.png'), filename: 'isabel.png', content_type: 'image/png')
 
 User.create!(
   email: 'ryan@email.com',
@@ -57,7 +61,8 @@ User.create!(
   two_hours: false,
   one_hundred_metres: true,
   five_hundred_metres: false,
-  one_kilometer: false
-)
+  one_kilometer: false,
+  phone_number: '+818067915731',
+).photo.attach(io: File.open('app/assets/images/ryan.jpg'), filename: 'ryan.jpg', content_type: 'image/jpg')
 
 puts "Created unique users, one for each member of our team"
