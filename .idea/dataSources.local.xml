@@ -13,20 +13,14 @@
       <user-name>samschlicht</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node negative="1">
-            <node kind="database" qname="@">
-              <node kind="schema" qname="@" />
-            </node>
-            <node kind="database" qname="Ambl_development">
-              <node kind="schema" negative="1" />
-            </node>
+          <node kind="database" qname="Ambl_development">
+            <node kind="schema" negative="1" />
           </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>
     <data-source name="Rails Ambl: production" uuid="40808020-c2a3-43cc-a05e-4d5fd6c85831">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
-      <user-name>Ambl</user-name>
       <schema-mapping />
     </data-source>
   </component>
