@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="title">Ambl</div>
+    <div class="subtitle">Find hidden gems, wherever you go!</div>
+    <%= link_to "Set your notification settings", settings_path, class: "button" %>
+    <%= link_to "Set your interests", interests_path, class: "button" %>
+    <p class="slogan">We’ll take care of the rest</p>
+
+
+
+<%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %>
