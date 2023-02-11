@@ -18,6 +18,7 @@ puts "Destroying all interests"
 Interest.destroy_all
 
 User.create!(
+  name: 'samschlicht',
   email: 'sam@email.com',
   password: '123456',
   thirty_minutes: true,
@@ -30,6 +31,7 @@ User.create!(
 ).photo.attach(io: File.open('app/assets/images/sam.jpg'), filename: 'sam.jpg', content_type: 'image/jpg')
 
 User.create!(
+  name: 'ander-lyle',
   email: 'james@email.com',
   password: '123456',
   thirty_minutes: true,
@@ -42,6 +44,7 @@ User.create!(
 ).photo.attach(io: File.open('app/assets/images/james.jpg'), filename: 'james.jpg', content_type: 'image/jpg')
 
 User.create!(
+  name: 'Isoshka',
   email: 'isabel@email.com',
   password: '123456',
   thirty_minutes: true,
@@ -54,6 +57,7 @@ User.create!(
 ).photo.attach(io: File.open('app/assets/images/isabel.png'), filename: 'isabel.png', content_type: 'image/png')
 
 User.create!(
+  name: 'ryankaimcclure',
   email: 'ryan@email.com',
   password: '123456',
   thirty_minutes: true,
