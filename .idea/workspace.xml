@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="135163fa-d262-4d38-a3a8-d1645ace62e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230212231815_remove_details_from_user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Ambl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ambl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/Ambl_development.EnwpbA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/Ambl_development.EnwpbA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3badbf04-18ee-4154-866e-17dca15d42a9/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/.google_api_key.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/coffee.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/interest_search.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676088871310</updated>
       <workItem from="1676088874196" duration="648000" />
-      <workItem from="1676243594838" duration="425000" />
+      <workItem from="1676243594838" duration="9185000" />
     </task>
     <servers />
   </component>
