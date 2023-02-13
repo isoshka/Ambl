@@ -1,10 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require_relative 'books.json'
+require_relative 'clothes.json'
+require_relative 'cocktails.json'
+require_relative 'coffee.json'
+require_relative 'design-store.json'
+require_relative 'gallery.json'
+require_relative 'gift-store.json'
+require_relative 'guitars.json'
+require_relative 'izakaya.json'
+require_relative 'jewelry.json'
+require_relative 'monument.json'
+require_relative 'museum.json'
+require_relative 'nightclub.json'
+require_relative 'park.json'
+require_relative 'plant-store.json'
+require_relative 'ramen.json'
+require_relative 'records.json'
+require_relative 'sushi.json'
+require_relative 'temple.json'
 
 User.destroy_all
 puts "Destroyed all users"
@@ -64,3 +76,5 @@ interests.length.times do |i|
 end
 
 puts "Created #{interests.length} interests"
+
+
