@@ -1,22 +1,6 @@
-require_relative 'books.json'
-require_relative 'clothes.json'
-require_relative 'cocktails.json'
-require_relative 'coffee.json'
-require_relative 'design-store.json'
-require_relative 'gallery.json'
-require_relative 'gift-store.json'
-require_relative 'guitars.json'
-require_relative 'izakaya.json'
-require_relative 'jewelry.json'
-require_relative 'monument.json'
-require_relative 'museum.json'
-require_relative 'nightclub.json'
-require_relative 'park.json'
-require_relative 'plant-store.json'
-require_relative 'ramen.json'
-require_relative 'records.json'
-require_relative 'sushi.json'
-require_relative 'temple.json'
+require 'json'
+
+# USERS
 
 User.destroy_all
 puts "Destroyed all users"
@@ -28,6 +12,8 @@ Bookmark.destroy_all
 puts "Destroyed all bookmarks"
 Interest.destroy_all
 puts "Destroyed all interests"
+
+puts "Creating users..."
 
 User.create!(
   name: 'samschlicht',
@@ -67,7 +53,9 @@ User.create!(
 
 puts "Created 4 unique users, one for each member of our team"
 
-interests = %w(coffee cocktails nightclub ramen sushi izakaya records guitars books gift-store gallery museum park clothes plant-store design-store jewelry temple monument)
+# INTERESTS
+
+interests = %w(cafe cocktail-bar nightclub ramen sushi izakaya record-store guitar-store book-store gift-store gallery museum park clothes-store plant-store design-store jewelry-store temple monument)
 
 interests.length.times do |i|
   Interest.create!(
@@ -76,5 +64,29 @@ interests.length.times do |i|
 end
 
 puts "Created #{interests.length} interests"
+
+puts "Creating places..."
+
+# PLACES
+# going to iterate over interests so that I can link the place to the interest from the start and do all the json files at once
+interests.each do |interest|
+  interest_id = (Interest.find_by name: "#{interest}").id
+  file = File.read("app/services/#{interest}.json")
+  places_hash = JSON.parse(file)
+  places_hash["results"].each do |place|
+    Place.create!({
+                    name: place["name"],
+                    address: place["vicinity"],
+                    lng: place["geometry"]["location"]["lng"],
+                    lat: place["geometry"]["location"]["lat"],
+                    interest_id: interest_id,
+                    google_place_id: place["place_id"],
+                    google_rating: place["rating"],
+                    google_photo_url: place["photos"][0]["photo_reference"]
+    })
+  end
+end
+
+puts "Created #{Place.count} places, all within 5km of the Hub in Meguro!"
 
 
