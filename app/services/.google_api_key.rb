@@ -1,0 +1,1 @@
+$google_maps_api_key = 'AIzaSyCqJKoNQrQGewoxaSaj6fTSinJLntgKNrI'
