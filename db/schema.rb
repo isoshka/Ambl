@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_11_070204) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_02_13_032235) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -77,7 +76,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_070204) do
     t.bigint "interest_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "open"
+    t.string "google_place_id"
+    t.float "google_rating"
+    t.string "google_photo_url"
     t.index ["interest_id"], name: "index_places_on_interest_id"
   end
 
@@ -89,14 +90,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_11_070204) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "thirty_minutes"
-    t.boolean "one_hour"
-    t.boolean "two_hours"
-    t.boolean "one_hundred_metres"
-    t.boolean "five_hundred_metres"
-    t.boolean "one_kilometer"
     t.string "phone_number"
     t.string "name"
+    t.string "frequency"
+    t.string "distance"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

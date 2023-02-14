@@ -40,3 +40,6 @@
 *.swp
 .DS_Store
 .env*
+
+# ignore google api key
+.google_api_key.rb
