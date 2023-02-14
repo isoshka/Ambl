@@ -6,8 +6,7 @@
 
   <div class="form-inputs">
     <%= f.input :frequency, collection: User::FREQUENCY, label:'Frequency', priority: ['30 minutes', '1 hour', '2 hours']  %>
-    <%= f.input :distance, collection: User::DISTANCE, label:'Distance', priority: ['500 meters', '800 meters', '1km'] %>
-
+    <%= f.input :distance, collection: User::DISTANCE, label:'Distance', priority: ['100 meters', '500 meters', '1km'] %>
   </div>
 
   <div class="form-actions">
