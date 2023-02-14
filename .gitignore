@@ -42,4 +42,4 @@
 .env*
 
 # ignore google api key
-.google_api_key.rb
+/app/services/.google_api_key.rb

@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="135163fa-d262-4d38-a3a8-d1645ace62e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/book-store.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/cafe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/clothes-store.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/cocktail-bar.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/guitar-store.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/jewelry-store.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/record-store.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230213032235_remove_open_from_places.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Ambl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ambl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/interest.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/interest.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/place.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/place.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/books.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/clothes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/cocktails.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/coffee.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/design-store.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/design-store.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/gallery.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/gallery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/gift-store.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/gift-store.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/guitars.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/interest_search.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/interest_search.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/izakaya.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/izakaya.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/jewelry.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/monument.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/monument.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/museum.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/museum.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/nightclub.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/nightclub.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/park.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/park.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/plant-store.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/plant-store.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/ramen.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/ramen.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/records.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/sushi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/sushi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/temple.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/temple.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,20 +26,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/samschlicht/Desktop/Ambl/app/services",
-    "nodejs_package_manager_path": "yarn",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "application.passwordSafe"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/samschlicht/Desktop/Ambl/app/services&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/services" />
