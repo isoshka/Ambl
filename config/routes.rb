@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'interests/new'
   get 'bookmarks/new'
   get 'users/new'
   devise_for :users, controllers: {
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   resources :interests, only: [:index]
 
-  resources :bookmarks, only: [:create]
+  resources :bookmarks, only: [:create, :index]
 
   resources :notifications, only: [:create, :show]
 

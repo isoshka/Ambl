@@ -22,7 +22,8 @@ User.create!(
   frequency: '30 minutes',
   distance: '500 meters',
   phone_number: '+61401788039',
-).photo.attach(io: File.open('app/assets/images/sam.jpg'), filename: 'sam.jpg', content_type: 'image/jpg')
+)
+#.photo.attach(io: File.open('app/assets/images/sam.jpg'), filename: 'sam.jpg', content_type: 'image/jpg')
 
 User.create!(
   name: 'ander-lyle',
@@ -31,7 +32,8 @@ User.create!(
   frequency: '30 minutes',
   distance: '500 meters',
   phone_number: '+818035702607',
-).photo.attach(io: File.open('app/assets/images/james.jpg'), filename: 'james.jpg', content_type: 'image/jpg')
+)
+#.photo.attach(io: File.open('app/assets/images/james.jpg'), filename: 'james.jpg', content_type: 'image/jpg')
 
 User.create!(
   name: 'Isoshka',
@@ -40,7 +42,8 @@ User.create!(
   frequency: '30 minutes',
   distance: '500 meters',
   phone_number: '+817083931377',
-).photo.attach(io: File.open('app/assets/images/isabel.png'), filename: 'isabel.png', content_type: 'image/png')
+)
+#.photo.attach(io: File.open('app/assets/images/isabel.png'), filename: 'isabel.png', content_type: 'image/png')
 
 User.create!(
   name: 'ryankaimcclure',
@@ -49,7 +52,8 @@ User.create!(
   frequency: '30 minutes',
   distance: '500 meters',
   phone_number: '+818067915731',
-).photo.attach(io: File.open('app/assets/images/ryan.jpg'), filename: 'ryan.jpg', content_type: 'image/jpg')
+)
+#.photo.attach(io: File.open('app/assets/images/ryan.jpg'), filename: 'ryan.jpg', content_type: 'image/jpg')
 
 puts "Created 4 unique users, one for each member of our team"
 
