@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails Ambl: development">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
+    <root id="1">
+      <ServerVersion>14.7</ServerVersion>
+      <StartupTime>1676436062</StartupTime>
+    </root>
+    <database id="2" parent="1" name="Ambl_development">
+      <Current>1</Current>
+      <ObjectId>16506</ObjectId>
+      <OwnerName>samschlicht</OwnerName>
+    </database>
+    <database id="3" parent="1" name="Ambl_test">
+      <ObjectId>16507</ObjectId>
+      <OwnerName>samschlicht</OwnerName>
+    </database>
+    <database id="4" parent="1" name="petpad_development">
+      <ObjectId>16384</ObjectId>
+      <OwnerName>samschlicht</OwnerName>
+    </database>
+    <database id="5" parent="1" name="petpad_test">
+      <ObjectId>16385</ObjectId>
+      <OwnerName>samschlicht</OwnerName>
+    </database>
+    <database id="6" parent="1" name="postgres">
+      <Comment>default administrative connection database</Comment>
+      <ObjectId>14034</ObjectId>
+      <OwnerName>samschlicht</OwnerName>
+    </database>
+    <schema id="7" parent="2" name="information_schema">
+      <ObjectId>13668</ObjectId>
+      <StateNumber>532</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="8" parent="2" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <ObjectId>11</ObjectId>
+      <StateNumber>525</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="9" parent="2" name="public">
+      <Comment>standard public schema</Comment>
+      <Current>1</Current>
+      <ObjectId>2200</ObjectId>
+      <StateNumber>526</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="10" parent="3" name="information_schema">
+      <ObjectId>13668</ObjectId>
+      <StateNumber>532</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="11" parent="3" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <ObjectId>11</ObjectId>
+      <StateNumber>525</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="12" parent="3" name="public">
+      <Comment>standard public schema</Comment>
+      <Current>1</Current>
+      <ObjectId>2200</ObjectId>
+      <StateNumber>526</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="13" parent="4" name="information_schema">
+      <ObjectId>13668</ObjectId>
+      <StateNumber>532</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="14" parent="4" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <ObjectId>11</ObjectId>
+      <StateNumber>525</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="15" parent="4" name="public">
+      <Comment>standard public schema</Comment>
+      <Current>1</Current>
+      <ObjectId>2200</ObjectId>
+      <StateNumber>526</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="16" parent="5" name="information_schema">
+      <ObjectId>13668</ObjectId>
+      <StateNumber>532</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="17" parent="5" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <ObjectId>11</ObjectId>
+      <StateNumber>525</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="18" parent="5" name="public">
+      <Comment>standard public schema</Comment>
+      <Current>1</Current>
+      <ObjectId>2200</ObjectId>
+      <StateNumber>526</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="19" parent="6" name="information_schema">
+      <ObjectId>13668</ObjectId>
+      <StateNumber>532</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="20" parent="6" name="pg_catalog">
+      <Comment>system catalog schema</Comment>
+      <ObjectId>11</ObjectId>
+      <StateNumber>525</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+    <schema id="21" parent="6" name="public">
+      <Comment>standard public schema</Comment>
+      <Current>1</Current>
+      <ObjectId>2200</ObjectId>
+      <StateNumber>526</StateNumber>
+      <OwnerName>samschlicht</OwnerName>
+    </schema>
+  </database-model>
+</dataSource>
