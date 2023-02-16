@@ -10,8 +10,9 @@
       <ObjectId>16506</ObjectId>
       <OwnerName>samschlicht</OwnerName>
     </database>
-    <database id="3" parent="1" name="Ambl_test">
-      <ObjectId>16507</ObjectId>
+    <database id="3" parent="1" name="postgres">
+      <Comment>default administrative connection database</Comment>
+      <ObjectId>14034</ObjectId>
       <OwnerName>samschlicht</OwnerName>
     </database>
     <database id="4" parent="1" name="petpad_development">
@@ -22,9 +23,8 @@
       <ObjectId>16385</ObjectId>
       <OwnerName>samschlicht</OwnerName>
     </database>
-    <database id="6" parent="1" name="postgres">
-      <Comment>default administrative connection database</Comment>
-      <ObjectId>14034</ObjectId>
+    <database id="6" parent="1" name="Ambl_test">
+      <ObjectId>16507</ObjectId>
       <OwnerName>samschlicht</OwnerName>
     </database>
     <schema id="7" parent="2" name="information_schema">
