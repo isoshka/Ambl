@@ -1,5 +1,5 @@
 .subtitle {
   font-size: 16px;
-  margin-bottom: 40px;
   font-family: Sans-Serif;
+  margin: none;
 }
