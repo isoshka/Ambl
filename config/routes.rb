@@ -18,9 +18,10 @@ Rails.application.routes.draw do
 
   # get "/settings", to: "users#settings"
 
-  resources :interests, only: [:index]
+  resources :interests, only: [:index] do
+    resources :bookmarks, only: [:create, :index]
+  end
 
-  resources :bookmarks, only: [:create, :index]
 
   resources :notifications, only: [:create, :show]
 
