@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   get 'interests/new'
   get 'bookmarks/new'
   get 'users/new'
-  devise_for :users, controllers: {
-    sessions: 'users/sessions',
+  devise_for :users
+    # registrations: 'users/registrations',
     # get 'settings' => 'users/sessions#settings'
-  }
-  devise_scope :user do
-    get 'settings' => 'users/sessions#settings'
+
+    devise_scope :user do
+    get 'settings' => 'users/registrations#settings'
   end
   root to: "pages#home"
 
