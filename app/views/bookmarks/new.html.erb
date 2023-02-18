@@ -1,0 +1,9 @@
+<% @interests.each do |interest| %>
+<p> This is your interest:  <%= interest.name %> </p>
+<% end %>
+
+<h1>New Bookmark</h1>
+<%= simple_form_for [@interest.bookmark] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
