@@ -1,4 +1,6 @@
-<h1>This is the Interest Index</h1>
+<h1>This is the interest index</h1>
 <% @interests.each do |interest| %>
   <p><%= interest.name %></p>
 <% end %>
+
+<p><%= link_to 'create a new Bookmark', interests_new_path %></p>

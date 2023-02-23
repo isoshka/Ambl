@@ -1,5 +1,5 @@
 <div class="flex-parent jc-center mb-6">
-  <h1 class="settings">Settings</h1>
+  <h1 class="settings">Sessions Settings</h1>
 </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -10,11 +10,11 @@
     <%= f.input :distance, collection: User::DISTANCE, label:'Distance:', priority: ['100 meters', '500 meters', '1km'] %>
   </div>
 
-<div class="flex-parent jc-center">
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-      </div>
-  <% end %>
-</div>
+  <div class="flex-parent jc-center">
+    <div class="form-actions">
+      <%= f.button :submit, "Update", redirect_to interest_bookmarks_path %>
+    </div>
+  </div>
+<% end %>
 
 <%= link_to "Back", :back %>

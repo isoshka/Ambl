@@ -1,3 +1,13 @@
-<% @interests.each do |interest| %>
-<p> This is your interest:  <%= interest.name %> </p>
-<% end %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <% count = 1 %>
+        <% @my_bookmarks.each do |bookmark| %>
+          <h3><p> This is your interest <%= count %>: <%= bookmark.interest.name %></p></h3>
+        <% count+=1 %>
+        <% end %>
+
+ <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Create a new bookmark</h3>
+    <%= link_to "Add bookmark", bookmarks_new_path, class: "btn btn-flat" %>
+  </div>

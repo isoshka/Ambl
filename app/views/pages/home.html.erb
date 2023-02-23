@@ -6,10 +6,8 @@
 <div class="subtitle">Find hidden gems, wherever you go!</div>
 <% if current_user %>
   <%= link_to "Set your preferences", settings_path, class: "ambl-button" %>
-  <%= link_to "Choose your interests", interests_path, class: "ambl-button" %>
+  <%= link_to "Choose your interests", bookmarks_new_path, class: "ambl-button" %>
 <% else  %>
   <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary my-3" %>
 <% end %>
 <div class="subtitle">And we’ll take care of the rest.</div>
-
-
