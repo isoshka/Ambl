@@ -7,7 +7,7 @@ class InterestSearch
     # this is the url for a 'nearby search' using the Google Places API, specifying the Hub in Meguro as the location and 10km as the radius
     interests = %w(cafe cocktail-bar nightclub ramen)
     puts interests
-    url = URI("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=35.6345266519309,139.70829303068464&radius=5000&keyword=#{@keyword}&key=AIzaSyCqJKoNQrQGewoxaSaj6fTSinJLntgKNrI")
+    url = URI("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=35.6345266519309,139.70829303068464&radius=5000&keyword=#{@keyword}&key=#{ENV.fetch('GOOGLE_MAPS_API_KEY')}")
     interests.each do |interest|
       filepath = "./app/services/#{interest}.json"
       File.new(filepath, "w")
