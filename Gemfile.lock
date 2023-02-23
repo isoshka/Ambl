@@ -130,6 +130,7 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (6.3.0)
       sassc (~> 2.0)
+    geocoder (1.8.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
     headless (2.3.1)
@@ -205,6 +206,8 @@ GEM
     netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.14.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
@@ -328,6 +331,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -339,6 +343,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass (~> 6.1)
+  geocoder
   jbuilder
   jsbundling-rails
   kimurai

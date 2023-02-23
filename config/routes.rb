@@ -19,6 +19,12 @@ Rails.application.routes.draw do
 
   # get "/settings", to: "users#settings"
 
+  resources :bookmarks, only: [:create] do
+    collection do
+      get :nearby
+    end
+  end
+
   resources :interests, only: [:index]
 
   resources :bookmarks, only: [:create, :index]
