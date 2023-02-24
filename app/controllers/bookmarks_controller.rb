@@ -45,8 +45,8 @@ class BookmarksController < ApplicationController
     @places = Place.near([latitude, longitude], max_distance, latitude: :lat, longitude: :lng).where(interest_id: @interest_ids)
     if @places.present?
       @places.each do |place|
-        message = "Hey, you're near #{place.name} at #{place.address}. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
-        " Get directions here: #{directions_place_url(place)}"
+        message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
+        " Get directions here: #{place_url(place)}"
         @client.messages.create(
           from: ENV['TWILIO_PHONE_NUMBER'],
           to: current_user.phone_number,
