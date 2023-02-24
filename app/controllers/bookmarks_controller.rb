@@ -32,23 +32,8 @@ class BookmarksController < ApplicationController
     else
       "Limit reached, sorry."
     end
-    # this is how to create Bookmark.create(interest_id: 8, user_id: 6)
-
-    # how does this code fit in?
-    # @existing_interests = Bookmark.find(params[:user_id])
-    # @existing_interests.length
-    # if @existing_interests.length > 3
-    # return “You can only pick 3 interests”
-    # else < 3
-    # @interests = params[:interests]
-    # @interests.each do |interest|
-    # @existing_interests find it exist
-    # if it doesnt save
-    # end
-    # if @interests.length > 3
-    # return “You can only pick 3 interests”
-    # else < 3
   end
+end
 
   def nearby
     latitude = params[:latitude]
@@ -108,4 +93,3 @@ class BookmarksController < ApplicationController
   def bookmark_params
     params.require(:bookmark).permit(:interest_id)
   end
-end
