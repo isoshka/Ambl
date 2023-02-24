@@ -1,15 +1,21 @@
 <% if current_user %>
-  <%= render 'shared/avatar' %>
-<% end %>
-
+  <div class="d-flex align-items-center justify-content-center">
+    <%= render 'shared/avatar' %>
+    <div class="ml-3">
+      <div class="title"><em>Ambl</em></div>
+      <div class="subtitle">Find hidden gems, wherever you go!</div>
+      <div class="subtitle mt-3">And we’ll take care of the rest.</div>
 <div class="title"><em>Ambl</em></div>
 <div class="subtitle">Find hidden gems, wherever you go!</div>
 <% if current_user %>
   <%= link_to "Set your preferences", settings_path, class: "ambl-button" %>
-  <%= link_to "Choose your interests", interests_path, class: "ambl-button" %>
+  <%= link_to "Choose your interests", bookmarks_new_path, class: "ambl-button" %>
 <% else  %>
-  <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary my-3" %>
+  <div class="text-center">
+    <div class="title"><em>Ambl</em></div>
+    <div class="subtitle">Find hidden gems, wherever you go!</div>
+    <%= link_to "Log In", new_user_session_path, class: "btn btn-secondary my-3" %>
+  </div>
 <% end %>
 <div class="subtitle">And we’ll take care of the rest.</div>
-
 

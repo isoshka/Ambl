@@ -8,6 +8,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def settings
     # build_resource
+    # redirect_to interests_path
+  end
+
+  private
+
+  def after_update_path_for(_resource)
+    interests_path
   end
 
   # GET /resource/sign_up
