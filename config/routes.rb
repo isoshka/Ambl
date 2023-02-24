@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'places/new'
   get 'interests/new'
   get 'bookmarks/new'
   get 'users/new'
@@ -18,13 +19,19 @@ Rails.application.routes.draw do
 
   # get "/settings", to: "users#settings"
 
+  resources :bookmarks, only: [:create] do
+    collection do
+      get :nearby
+    end
+  end
+
   resources :interests, only: [:index]
 
   resources :bookmarks, only: [:new, :create, :index]
 
   resources :notifications, only: [:create, :show]
 
-  resources :places, only: [] do
+  resources :places, only: [:show] do
     member do
       get :directions
     end
