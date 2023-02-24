@@ -30,27 +30,34 @@ class BookmarksController < ApplicationController
       @interest_ids << bookmark.interest_id
     end
 
-    # origin_lat = current_user.latitude
-    # origin_lng = current_user.longitude
+    # origin_lat = position.coords.latitude
+    # origin_lng =
     # dest_lat = place.lat
     # dest_lng = place.lng
 
     # @places = Place.near([latitude, longitude], 3).where(interest_id: @interest_ids)
-    @places = Place.near([latitude, longitude], 1, latitude: :lat, longitude: :lng).where(interest_id: @interest_ids)
-    if @place.present?
-      message = "Hey, you're near #{@place.name} at #{@place.address}.
-      # https://www.google.com/maps/dir/?api=1&origin=#{origin_lat},#{origin_lng}&destination=#{dest_lat},#{dest_lng}"
+    @places = Place.near([latitude, longitude], 3, latitude: :lat, longitude: :lng).where(interest_id: @interest_ids)
+    if @places.present?
+      @places.each do |place|
+        message = "Hey, you're near #{place.name} at #{place.address}. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away" \
+        " Get directions here: #{directions_place_url(place)}"
 
-      @client.messages.create(
-        from: ENV['TWILIO_PHONE_NUMBER'],
-        to: current_user.phone_number,
-        body: message
-      )
+
+        @client.messages.create(
+          from: ENV['TWILIO_PHONE_NUMBER'],
+          to: current_user.phone_number,
+          body: message
+        )
+
+        # exit the loop after sending the message for the first place
+        break
+      end
+
     end
-
-    # render the closest place
-    render json: @place
+    # render the nearby places
+    render json: @places
   end
+
 
   def destroy
     @bookmark.destroy
