@@ -1,0 +1,23 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+        <% @bookmarks.each do |bookmark| %>
+          <h3><p> This is your current interest: <%= bookmark.interest.name %> </p></h3>
+        <% end %>
+
+          <div>
+            <h3>Save an interest</h3>
+                 <%= simple_form_for @bookmark do |f| %>
+                   <%= f.association :interest, prompt: "Select an interest", label:'Interest:', priority: ['cafe', 'cocktail-bar', 'nightclub', 'ramen'] %>
+                   <%= f.submit class: "btn btn-flat" %>
+                 <% end %>
+               </div>
+
+
+
+
+
+
+      </div>
+    </div>
+</div>

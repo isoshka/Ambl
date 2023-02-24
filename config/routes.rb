@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   resources :interests, only: [:index]
 
-  resources :bookmarks, only: [:create, :index]
+  resources :bookmarks, only: [:new, :create, :index]
 
   resources :notifications, only: [:create, :show]
 
