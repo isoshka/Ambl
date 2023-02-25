@@ -84,6 +84,7 @@ class BookmarksController < ApplicationController
     @bookmark.destroy
     redirect_to bookmarks_path, status: :see_other
   end
+end
 
   private
 
