@@ -6,6 +6,7 @@
       <div class="bookmark-card-body">
         <h5 class="card-title"> <%= bookmark.interest.name%></h5>
         <p class="card-text">This is your current interest, if you want a new interest please edit it</p>
+          <%= link_to "Delete",  bookmark_path(bookmark),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
       </div>
     </div>
   <% end %>

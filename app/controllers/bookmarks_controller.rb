@@ -32,7 +32,6 @@ class BookmarksController < ApplicationController
       render :new
     end
   end
-end
 
   def nearby
     latitude = params[:latitude]
@@ -40,17 +39,17 @@ end
 
     distance = User::DISTANCE.index(current_user.distance) # get the index of the selected distance
     max_distance = case distance # set the maximum distance based on the index
-    when "100 meters"
-      0.1 # 100 meters
-    when "500 meters"
-      0.5 # 500 meters
-    when "1km"
-      1.0 # 1km
-    else
-      3.0 # fallback to 3km
-    end
+                   when "100 meters"
+                     0.1 # 100 meters
+                   when "500 meters"
+                     0.5 # 500 meters
+                   when "1km"
+                     1.0 # 1km
+                   else
+                     3.0 # fallback to 3km
+                   end
 
-    @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
+    @client = Twilio::REST::Client.new(ENV.fetch("TWILIO_ACCOUNT_SID", nil), ENV.fetch("TWILIO_AUTH_TOKEN", nil))
     # # get the nearby bookmarks
     @interest_ids = []
     @bookmarks = Bookmark.where(user_id: current_user.id)
@@ -58,13 +57,14 @@ end
       @interest_ids << bookmark.interest_id
     end
 
-    @places = Place.near([latitude, longitude], max_distance, latitude: :lat, longitude: :lng).where(interest_id: @interest_ids)
+    @places = Place.near([latitude, longitude], max_distance, latitude: :lat,
+                                                              longitude: :lng).where(interest_id: @interest_ids)
     if @places.present?
       @places.each do |place|
         message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
-        " Get directions here: #{place_url(place)}"
+                  " Get directions here: #{place_url(place)}"
         @client.messages.create(
-          from: ENV['TWILIO_PHONE_NUMBER'],
+          from: ENV.fetch('TWILIO_PHONE_NUMBER', nil),
           to: current_user.phone_number,
           body: message
         )
@@ -77,12 +77,11 @@ end
     render json: @places
   end
 
-
   def destroy
+    @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to interests_path(@bookmark.list), status: :see_other
+    redirect_to bookmarks_path, status: :see_other
   end
-end
 
   private
 
@@ -93,3 +92,4 @@ end
   def bookmark_params
     params.require(:bookmark).permit(:interest_id)
   end
+end
