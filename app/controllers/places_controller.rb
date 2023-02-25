@@ -4,6 +4,10 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    @marker = {
+        lat: @place.lat,
+        lng: @place.lng
+      }
   end
 
 end
