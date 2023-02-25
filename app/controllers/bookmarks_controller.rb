@@ -49,7 +49,7 @@ class BookmarksController < ApplicationController
        3.0 # fallback to 3km
      end
 
-    @client = Twilio::REST::Client.new(ENV.fetch("TWILIO_ACCOUNT_SID", nil), ENV.fetch("TWILIO_AUTH_TOKEN", nil))
+    @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
     # # get the nearby bookmarks
     @interest_ids = []
     @bookmarks = Bookmark.where(user_id: current_user.id)
@@ -63,7 +63,7 @@ class BookmarksController < ApplicationController
         message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
                   " Get directions here: #{place_url(place)}"
         @client.messages.create(
-          from: ENV.fetch('TWILIO_PHONE_NUMBER', nil),
+          from: ENV['TWILIO_PHONE_NUMBER'],
           to: current_user.phone_number,
           body: message
         )
