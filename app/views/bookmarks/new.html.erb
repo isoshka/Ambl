@@ -1,9 +1,5 @@
-            <h3>Please, select your interests</h3>
-                  <%= simple_form_for @bookmark do |f| %>
-                    <%= f.association :interest, prompt: "Select an interest", label:'Interest:', priority: ['cafe', 'cocktail-bar', 'nightclub', 'ramen'] %>
-                    <%= link_to "Save", bookmarks_path, class: "ambl-button mr-3" %>
-                  <% end %>
-                </div>
-      </div>
-    </div>
-</div>
+<h3>Please, select your interests</h3>
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.association :interest, prompt: "Select an interest", label:'Interest:', priority: ['cafe', 'cocktail-bar', 'nightclub', 'ramen'] %>
+  <%= f.button :submit, "Save", class: "ambl-button mr-3" %>
+<% end %>

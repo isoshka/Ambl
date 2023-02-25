@@ -1,22 +1,13 @@
-
-<h1> This are the interests you have selected </h1>
-  <% count = 1 %>
-  <% @my_bookmarks.each do |bookmark| %>
-  <div container>
-  <div class="card text-center m-1" >
-    <div class="bookmark-card-header">This is your interest:</div>
-    <div class="bookmark-card-body">
-      <h5 class="card-title"> <%= bookmark.interest.name%></h5>
-       <% count+=1 %>
-       <% end %>
-      <p class="card-text">This is your current interest, if you want a new interest please edit it</p>
-      <%= link_to "New interest", bookmarks_new_path, class: "ambl-button mr-3" %>
+<div container>
+  <h1> This are the interests you have selected </h1>
+  <% @my_bookmarks.each_with_index do |bookmark, index| %>
+    <div class="card text-center m-1" >
+      <div class="bookmark-card-header">This is your interest <%= index + 1 %>:</div>
+      <div class="bookmark-card-body">
+        <h5 class="card-title"> <%= bookmark.interest.name%></h5>
+        <p class="card-text">This is your current interest, if you want a new interest please edit it</p>
+      </div>
     </div>
-    <div class="card-footer text-muted">
-      2 days ago
-    </div>
-  </div>
-
-  </div>
   <% end %>
-
+  <%= link_to "New interest", bookmarks_new_path, class: "ambl-button mr-3" %>
+</div>
