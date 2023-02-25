@@ -4,9 +4,8 @@
     <div class="card text-center m-1" >
       <div class="bookmark-card-header">This is your interest <%= index + 1 %>:</div>
       <div class="bookmark-card-body">
-        <h5 class="card-title"> <%= bookmark.interest.name %></h5>
+        <h5 class="card-title"> <%= bookmark.interest.name%></h5>
         <p class="card-text">This is your current interest, if you want a new interest please edit it</p>
-          <%= button_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"} %>
       </div>
     </div>
   <% end %>
