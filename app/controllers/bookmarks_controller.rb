@@ -32,7 +32,7 @@ class BookmarksController < ApplicationController
       render :new
     end
   end
-end
+
 
   def nearby
     latitude = params[:latitude]
@@ -77,11 +77,11 @@ end
     render json: @places
   end
 
-
   def destroy
     @bookmark.destroy
     redirect_to interests_path(@bookmark.list), status: :see_other
   end
+end
 
   private
 
