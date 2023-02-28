@@ -20,19 +20,24 @@ export default class extends Controller {
     // this.#addMarkersToMap()
     // this.#fitMapToMarkers()
 
-    const direction = new MapboxDirections({
-      accessToken: mapboxgl.accessToken
+    this.direction = new MapboxDirections({
+      accessToken: mapboxgl.accessToken,
+      controls: {
+        inputs: false,
+        instructions: false
+      },
+      routePadding: 35
     })
     this.map.addControl(
-      direction,
+      this.direction,
       'bottom-right'
     );
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        direction.setOrigin([position.coords.longitude, position.coords.latitude])
+        this.direction.setOrigin([position.coords.longitude, position.coords.latitude])
         // this.markerValue
         console.log(this.markerValue);
-        direction.setDestination([this.markerValue.lng, this.markerValue.lat])
+        this.direction.setDestination([this.markerValue.lng, this.markerValue.lat])
       });
     }
 
