@@ -9,3 +9,14 @@ body {
   font-family: Sans-serif;
   color: white;
 }
+
+body.new {
+  background-color: #775577;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Sans-serif;
+  color: #775577;
+}

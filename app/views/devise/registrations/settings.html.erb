@@ -1,5 +1,5 @@
 <div class="flex-parent jc-center mb-6">
-  <h1><i class="fa-2x fa-sharp fa-solid fa-gear"></i>Personal Settings</h1>
+  <h1><i class="fa-2x fa-sharp fa-solid fa-gear"></i> Personal Settings</h1>
 </div>
     <div>
       <%= "_" *40 %>
@@ -16,7 +16,6 @@
   <p>Currently waiting confirmation for: <%= resource.
 unconfirmed_email %></p>
 <% end %>
-<% current_password = "123456" %>
 <%= f.input :current_password,
             hint: "We need your current password to confirm your changes", required: true, input_html: { autocomplete: "current-password" } %>
   </div>
