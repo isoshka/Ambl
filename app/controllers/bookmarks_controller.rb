@@ -46,7 +46,7 @@ class BookmarksController < ApplicationController
     when "1km"
       1.0 # 1km
     else
-      3.0 # fallback to 3km
+      5.0 # fallback to 3km
     end
 
     @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
@@ -59,18 +59,14 @@ class BookmarksController < ApplicationController
 
     @places = Place.near([latitude, longitude], max_distance, latitude: :lat, longitude: :lng).where(interest_id: @interest_ids)
     if @places.present?
-      @places.each do |place|
-        message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
+      place = @places.first
+      message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
         " Get directions here: #{place_url(place)}"
-        @client.messages.create(
-          from: ENV['TWILIO_PHONE_NUMBER'],
-          to: current_user.phone_number,
-          body: message
-        )
-        # exit the loop after sending the message for the first place
-        break
-      end
-
+      @client.messages.create(
+        from: ENV['TWILIO_PHONE_NUMBER'],
+        to: current_user.phone_number,
+        body: message
+      )
     end
     # render the nearby places
     render json: @places
