@@ -1,5 +1,5 @@
-<div container>
-  <h1> This are the interests you have selected </h1>
+<div class="flex-parent jc-center mb-6">
+  <h1> Your current interests </h1></div>
   <% @my_bookmarks.each_with_index do |bookmark, index| %>
     <div class="card text-center m-1" >
       <div class="bookmark-card-header">This is your interest <%= index + 1 %>:</div>
@@ -10,5 +10,5 @@
       </div>
     </div>
   <% end %>
-  <%= link_to "New interest", bookmarks_new_path, class: "ambl-button mr-3" %>
+  <%= link_to "New interest", bookmarks_new_path, class: "ambl-button" %>
 </div>
