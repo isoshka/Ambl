@@ -8,5 +8,5 @@ class User < ApplicationRecord
   DISTANCE = ['100 meters', '500 meters', '1km']
 
   has_one_attached :photo
-
+  acts_as_favoritor
 end

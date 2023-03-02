@@ -39,15 +39,15 @@ class BookmarksController < ApplicationController
 
     distance = User::DISTANCE.index(current_user.distance) # get the index of the selected distance
     max_distance = case distance # set the maximum distance based on the index
-     when "100 meters"
-       0.1 # 100 meters
-     when "500 meters"
-       0.5 # 500 meters
-     when "1km"
-       1.0 # 1km
-     else
-       3.0 # fallback to 3km
-     end
+    when "100 meters"
+      0.1 # 100 meters
+    when "500 meters"
+      0.5 # 500 meters
+    when "1km"
+      1.0 # 1km
+    else
+      3.0 # fallback to 3km
+    end
 
     @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
     # # get the nearby bookmarks
@@ -61,7 +61,7 @@ class BookmarksController < ApplicationController
     if @places.present?
       @places.each do |place|
         message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
-                  " Get directions here: #{place_url(place)}"
+        " Get directions here: #{place_url(place)}"
         @client.messages.create(
           from: ENV['TWILIO_PHONE_NUMBER'],
           to: current_user.phone_number,
