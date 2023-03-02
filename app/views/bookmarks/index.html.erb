@@ -1,17 +1,22 @@
 <div class="container">
   <div class="flex-parent jc-center mb-6">
-    <h1> Your list of interests </h1></div>
-      <% @my_bookmarks.each_with_index do |bookmark, index| %>
-        <div class="card text-center m-1" >
-          <div class="bookmark-card-header">Interest <%= index + 1 %>:</div>
-            <div class="bookmark-card-body">
-              <h2 class="card-title"> <%= bookmark.interest.name.capitalize %></h2>
-        <p class="card-text">(A notification has been set for the this interest.)</p>
-          <%= link_to "Delete",  bookmark_path(bookmark),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <div class="container">
+  <div class="flex-parent jc-center mb-6">
+    <h1><i class="fa-2x fa-solid fa-bookmark"></i> Your Interests</h1></div>
+      <div>
+        <%= "_" *35 %>
+          <% @my_bookmarks.each_with_index do |bookmark, index| %>
+            <div class="card text-center m-1" >
+              <div class="bookmark-card-header"><strong>Interest <%= index + 1 %>:</strong></div>
+                <div class="bookmark-card-body">
+                  <h2 class="card-title"> <strong><%= bookmark.interest.name.capitalize %> </strong></h2>
+            <p class="card-text">&nbsp;&nbsp;[A notification has been set for this interest.]&nbsp;&nbsp;</p>
+              <%= link_to "Delete",  bookmark_path(bookmark),  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          </div>
+        </div>
+      <% end %>
+      <br>
+      <br>
+      <%= link_to "New interest", bookmarks_new_path, class: "ambl-button" %>
       </div>
-    </div>
-  <% end %>
-  <br>
-  <%= link_to "New interest", bookmarks_new_path, class: "ambl-button" %>
-  </div>
 </div>
