@@ -5,13 +5,14 @@
       data-map-marker-value="<%= @marker.to_json %>"
       style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
 <div class="row">
-<div class="col-4 mb-3">
-      <div class="card", style="position: relative">
-    <div class="card-body">
+<div class="my-3">
+      <div class="map-card", style="position: relative">
+    <div class="map-card-body">
           <h5 class="card-title"><%= @place.name %></h5>
           <p class="card-text"><%= @place.address %><p>
           <div class="div", style="display: inline-block">
-<%= link_to "Take me there", bookmarks_new_path, class: "ambl-button mr-3" %>
+<%= link_to "Take me there", "#",data: { action: "click->map#showInstructions" }, class: "ambl-button take-me-there" %>
+<%= link_to "Not this time", bookmarks_new_path, class: "ambl-button" %>
   </div>
       </div>
     </div>
