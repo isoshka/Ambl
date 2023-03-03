@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="my-3"
+    data-controller="map"
+    id='map'
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+    data-map-marker-value="<%= @markerfav.to_json %>"
+    style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
+
+  <div class="row">
+  <button type="button" class="btn btn-primary btn-sm">
+    Liked Places <span class="badge badge-light" style="color: black;"><%= @favorite_places.count %></span>
+  </button>
+
+    <% @favorite_places.each do |place| %>
+      <div class="col-md-4 mb-4">
+        <div class="card" style="padding: 10px; border-radius: 10px;">
+          <div class="card-header">
+            <span class="badge badge-success">Name of place</span>
+            <%= content_tag :p, place.name, style: 'color: black;' %>
+          </div>
+          <ul class="list-group list-group-flush">
+            <span class="badge badge-primary">Address</span> <li class="list-group-item" ><%= place.address %></li>
+            <span class="badge badge-primary">Rating</span> <li class="list-group-item"><%= place.google_rating %></li>
+          </ul>
+          <%#= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<style>
+@media only screen and (max-width: 400px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+  margin-bottom: 120px; /* add some margin to the bottom */
+}
+</style>

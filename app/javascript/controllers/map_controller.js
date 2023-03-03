@@ -35,11 +35,12 @@ export default class extends Controller {
     if (this.direction){
       this.map.removeControl(this.direction)
     }
+
     this.direction = new MapboxDirections({
       accessToken: mapboxgl.accessToken,
       controls: {
         inputs: false,
-        instructions: instructions
+        instructions: false
       },
       routePadding: 35
     })
@@ -54,15 +55,20 @@ export default class extends Controller {
         console.log(this.markerValue);
         this.direction.setDestination([this.markerValue.lng, this.markerValue.lat])
       });
-    }
+
+    this.markerValue.forEach((marker) => {
+      new mapboxgl.Marker()
+        .setLngLat([marker.lng, marker.lat])
+        .addTo(this.map);
+    });
+
+    #fitMapToMarkers() {
+      const bounds = new mapboxgl.LngLatBounds()
+      this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+      this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+
   }
-  // #addMarkersToMap() {
-  //   this.markersValue.forEach((marker) => {
-  //     new mapboxgl.Marker()
-  //       .setLngLat([marker.lng, marker.lat])
-  //       .addTo(this.map)
-  //   })
-  // }
+}
 }
 // 1. in maps js controller target your take me there button
 // 2. on clicking that button the display: none argument is removed from mapbox-directions-instructions

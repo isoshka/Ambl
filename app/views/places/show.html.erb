@@ -6,17 +6,15 @@
       style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
 
 <div class="row">
-  <div class="col-md-4 mb-4">
-            </div>
-      <div class="map-card", style="position: relative">
-    <div class="map-card-body">
-          <h4 class="card-title"><%= @place.name %></h4>
-          <h5 class="card-address"><%= @place.address  %><h5>
-          <h6 class="card-"><%= @place.google_rating %><h6>
-
+<%= link_to "Save to favorite", toggle_favorite_place_path(@place), data: {"turbo-method": :post}, class: "btn btn-primary"%>
+<div class="col-4 mb-3">
+      <div class="card", style="position: relative">
+    <div class="card-body">
+          <h5 class="card-title"><%= @place.name %></h5>
+          <p class="card-text"><%= @place.address %><p>
           <div class="div", style="display: inline-block">
-<%= link_to "Take me there", "#",data: { action: "click->map#showInstructions" }, class: "ambl-button" %>
-<%= link_to "Not this time", bookmarks_new_path, class: "ambl-button" %>
+<%= link_to "Take me there", bookmarks_new_path, class: "ambl-button mr-3" %>
+
   </div>
       </div>
     </div>
