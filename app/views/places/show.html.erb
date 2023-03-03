@@ -4,6 +4,7 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-marker-value="<%= @marker.to_json %>"
       style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
+
 <div class="row">
 <%= link_to "Save to favorite", toggle_favorite_place_path(@place), data: {"turbo-method": :post}, class: "btn btn-primary"%>
 <div class="col-4 mb-3">
