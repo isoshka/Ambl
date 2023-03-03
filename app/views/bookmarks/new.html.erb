@@ -10,6 +10,7 @@
         <%= f.button :submit, "Save", class: "ambl-button" %>
       <% end %>
 </div>
+
 <div class="container">
   <h2>Or tap on the icons below</h2>
     <div>
@@ -30,4 +31,27 @@
         <i class="fa-2x fa-solid fa-book">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
         <i class="fa-2x fa-solid fa-landmark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
       </div>
+        <div>
+          <body.new><%= "." *1 %></body.new>
+        </div>
+</div>
+
+<div class="container">
+  <div class="flex-parent jc-center mb-6">
+    <%= simple_form_for @bookmark do |f| %>
+      <%= f.association :interest,
+                      as: :check_boxes,
+                      input_html: { class: "tag-selector" },
+                      item_wrapper_class: 'tag-item' %>
+      <% if :interest === "ramen" %>
+        <i class="fa-2x fa-solid fa-bowl-food"></i>
+      <% elsif :interest === "cafe" %>
+        <i class="fa-2x fa-solid fa-mug-saucer"></i>
+      <% elsif :interest === "cocktail-bar" %>
+        <i class="fa-2x fa-solid fa-martini-glass-citrus"></i>
+      <% elsif :interest === "nightclub" %>
+        <i class="fa-2x fa-solid fa-champagne-glasses"></i>
+      <% end %>
+    <% end %>
+  </div>
 </div>
