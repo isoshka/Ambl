@@ -13,15 +13,12 @@ class PlacesController < ApplicationController
   def index
     @places = Place.all
     @favorite_places = current_user.favorited_by_type('Place')
-    # @markers = @places.map do |place|
-    #   {
-    #     lat: place.latitude,
-    #     lng: place.longitude,
-    #     info_window_html: render_to_string(partial: "info_window", locals: {place: place}),
-    #     # image_url: helpers.asset_url("logo.png"),
-    #     marker_html: render_to_string(partial: "marker", locals: {place:place})
-    #   }
-    # end
+    @markerfav = @favorite_places.map do |place|
+      {
+        lat: place.lat,
+        lng: place.lng
+      }
+    end
   end
 
 
@@ -31,6 +28,13 @@ class PlacesController < ApplicationController
       lat: @place.lat,
       lng: @place.lng
     }
+  end
+
+  def destroy
+    @favorite_places = current_user.favorited_by_type('Place')
+    @favorite_places.destroy
+
+    redirect_to places_url, notice: "Place was successfully deleted."
   end
 
 end

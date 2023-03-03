@@ -17,33 +17,37 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     })
 
-    // this.#addMarkersToMap()
-    // this.#fitMapToMarkers()
-
-    const direction = new MapboxDirections({
-      accessToken: mapboxgl.accessToken
+    this.direction = new MapboxDirections({
+      accessToken: mapboxgl.accessToken,
+      controls: {
+        inputs: false,
+        instructions: false
+      },
+      routePadding: 35
     })
     this.map.addControl(
-      direction,
+      this.direction,
       'bottom-right'
     );
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        direction.setOrigin([position.coords.longitude, position.coords.latitude])
+        this.direction.setOrigin([position.coords.longitude, position.coords.latitude])
         // this.markerValue
         console.log(this.markerValue);
-        direction.setDestination([this.markerValue.lng, this.markerValue.lat])
+        this.direction.setDestination([this.markerValue.lng, this.markerValue.lat])
       });
     }
+    this.markerValue.forEach((marker) => {
+      new mapboxgl.Marker()
+        .setLngLat([marker.lng, marker.lat])
+        .addTo(this.map);
+    });
 
+    #fitMapToMarkers() {
+      const bounds = new mapboxgl.LngLatBounds()
+      this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+      this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
 
   }
-
-  // #addMarkersToMap() {
-  //   this.markersValue.forEach((marker) => {
-  //     new mapboxgl.Marker()
-  //       .setLngLat([marker.lng, marker.lat])
-  //       .addTo(this.map)
-  //   })
-  // }
+}
 }
