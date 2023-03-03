@@ -4,9 +4,11 @@ import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-direct
 // Connects to data-controller="map"
 export default class extends Controller {
   static values = {
+
     apiKey: String,
     marker: Object
   }
+  //static targets = ["directions"]
 
   connect() {
     console.log("Hello map")
@@ -16,15 +18,28 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10"
     })
-
+    this.showDirections()
     // this.#addMarkersToMap()
     // this.#fitMapToMarkers()
+    // const button = document.querySelector(".take-me-there");
+    // const directions = document.querySelector(".mapboxgl-ctrl-bottom-right");
+    //directions.classList.add("hidden");
 
+      //button.addEventListener("click", directions.classList.remove("hidden"))
+    //;
+  }
+  showInstructions() {
+    this.showDirections(true)
+  }
+  showDirections(instructions =false){
+    if (this.direction){
+      this.map.removeControl(this.direction)
+    }
     this.direction = new MapboxDirections({
       accessToken: mapboxgl.accessToken,
       controls: {
         inputs: false,
-        instructions: false
+        instructions: instructions
       },
       routePadding: 35
     })
@@ -40,10 +55,7 @@ export default class extends Controller {
         this.direction.setDestination([this.markerValue.lng, this.markerValue.lat])
       });
     }
-
-
   }
-
   // #addMarkersToMap() {
   //   this.markersValue.forEach((marker) => {
   //     new mapboxgl.Marker()
@@ -52,3 +64,7 @@ export default class extends Controller {
   //   })
   // }
 }
+// 1. in maps js controller target your take me there button
+// 2. on clicking that button the display: none argument is removed from mapbox-directions-instructions
+// 3. in your css file add a default display:none; to the mapbox—directions-instructions class.
+// id: “take-me-there”
