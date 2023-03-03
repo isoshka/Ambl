@@ -4,14 +4,18 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-marker-value="<%= @marker.to_json %>"
       style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
+
 <div class="row">
-<div class="my-3">
+  <div class="col-md-4 mb-4">
+            </div>
       <div class="map-card", style="position: relative">
     <div class="map-card-body">
-          <h5 class="card-title"><%= @place.name %></h5>
-          <p class="card-text"><%= @place.address %><p>
+          <h4 class="card-title"><%= @place.name %></h4>
+          <h5 class="card-address"><%= @place.address  %><h5>
+          <h6 class="card-"><%= @place.google_rating %><h6>
+
           <div class="div", style="display: inline-block">
-<%= link_to "Take me there", "#",data: { action: "click->map#showInstructions" }, class: "ambl-button take-me-there" %>
+<%= link_to "Take me there", "#",data: { action: "click->map#showInstructions" }, class: "ambl-button" %>
 <%= link_to "Not this time", bookmarks_new_path, class: "ambl-button" %>
   </div>
       </div>
