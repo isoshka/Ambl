@@ -24,7 +24,7 @@
             <span class="badge badge-primary">Address</span> <li class="list-group-item" ><%= place.address %></li>
             <span class="badge badge-primary">Rating</span>
               <li class="list-group-item">
-                <% rounded_rating = place.google_rating.round %>
+                <% rounded_rating = place.google_rating ? place.google_rating.round : 0 %>
                 <% rounded_rating.times do %>
                   <span class="fa fa-star checked" style="display: inline-block; color: gold;"></span>
                 <% end %>
