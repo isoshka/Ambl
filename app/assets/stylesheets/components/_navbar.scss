@@ -6,6 +6,10 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+
+  background: rgb(224,210,232);
+  background: linear-gradient(90deg, rgba(224,210,232,1) 0%, rgba(182,183,184,1) 56%);
+  z-index: 10;
 }
 
 .navbar-lewagon .navbar-collapse {

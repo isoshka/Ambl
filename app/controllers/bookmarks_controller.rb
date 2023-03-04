@@ -59,7 +59,6 @@ class BookmarksController < ApplicationController
 
     @places = Place.near([latitude, longitude], max_distance, latitude: :lat, longitude: :lng).where(interest_id: @interest_ids)
     if @places.present?
-      flash[:notice] = "A notification was sent to your phone and on the page."
       place = @places.first
       message = "Hey, you're near #{place.name} at #{place.address}!. It has a rating of #{place.google_rating} and is #{place.distance.round(2)}km away." \
         " Get directions here: #{place_url(place)}"
@@ -68,6 +67,9 @@ class BookmarksController < ApplicationController
         to: current_user.phone_number,
         body: message
       )
+      sleep(5)
+      flash[:notice] = "A notification was sent to your phone and on the page."
+
     end
     # render the nearby places
     render json: @places

@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import FavMapController from "./fav_map_controller"
+application.register("fav-map", FavMapController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
