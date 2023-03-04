@@ -24,7 +24,9 @@ export default class extends Controller {
   geolocate() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position)=>{
-        fetch(`/bookmarks/nearby?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`)
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        fetch(`/bookmarks/nearby?latitude=${latitude}&longitude=${longitude}`);
       });
     } else {
       console.log("Geolocation is not supported by this browser.");
