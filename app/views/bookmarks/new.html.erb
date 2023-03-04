@@ -1,6 +1,6 @@
 <div class="container">
   <div class="flex-parent jc-center mb-6">
-    <h1><i class="fa-2x fa-solid fa-bookmark"></i> Select your interest</h1></div>
+    <h1><i class="fa-1x fa-solid fa-bookmark"></i> Select your interest</h1></div>
       <div>
         <%= "_" *35 %>
       </div>
@@ -12,46 +12,32 @@
 </div>
 
 <div class="container">
-  <h2>Or tap on the icons below</h2>
-    <div>
-      <body.new><%= "." *1 %></body.new>
-    </div>
-      <div class="flex-parent jc-center">
-        <i class="fa-2x fa-solid fa-mug-saucer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-        <i class="fa-2x fa-solid fa-martini-glass-citrus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-        <i class="fa-2x fa-solid fa-bowl-food">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-        <i class="fa-2x fa-solid fa-champagne-glasses">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-      </div>
+  <div class="flex-parent jc-center mb-6">
+    <div class="container">
+      <%= simple_form_for @bookmark do |f| %>
         <div>
-          <body.new><%= "." *1 %></body.new>
+        <br>
+          <%= f.association :interest,
+                            as: :check_boxes,
+                            item_wrapper_class: "tag-item #{cycle('fa-2x fa-solid   fa-bowl-food', 'fa-2x fa-solid fa-mug-saucer', 'fa-2x   fa-solid fa-martini-glass-citrus', 'fa-2x fa-solid  fa-champagne-glasses')}",
+                            input_html: { class: "tag-selector #{current_cycle}" } %>
         </div>
+    </div>
       <div class="container">
-        <i class="fa-2x fa-solid fa-guitar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-        <i class="fa-2x fa-solid fa-arrows-down-to-people">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-        <i class="fa-2x fa-solid fa-book">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-        <i class="fa-2x fa-solid fa-landmark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-      </div>
         <div>
-          <body.new><%= "." *1 %></body.new>
+          <body.new p style="color:purple" ><%= "." *1 %></body.new>
+          </div>
+            <div class="container">
+              <i class="fa-2x fa-solid fa-guitar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+              <i class="fa-2x fa-solid fa-arrows-down-to-people">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+              <i class="fa-2x fa-solid fa-book">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+              <i class="fa-2x fa-solid fa-landmark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
+            </div>
+        <div>
+          <body.new p style="color:purple" ><%= "." *1 %></body.new>
         </div>
 </div>
-
-<div class="container">
-  <div class="flex-parent jc-center mb-6">
-    <%= simple_form_for @bookmark do |f| %>
-      <%= f.association :interest,
-                      as: :check_boxes,
-                      input_html: { class: "tag-selector" },
-                      item_wrapper_class: 'tag-item' %>
-      <% if :interest === "ramen" %>
-        <i class="fa-2x fa-solid fa-bowl-food"></i>
-      <% elsif :interest === "cafe" %>
-        <i class="fa-2x fa-solid fa-mug-saucer"></i>
-      <% elsif :interest === "cocktail-bar" %>
-        <i class="fa-2x fa-solid fa-martini-glass-citrus"></i>
-      <% elsif :interest === "nightclub" %>
-        <i class="fa-2x fa-solid fa-champagne-glasses"></i>
-      <% end %>
+      <%= f.button :submit, "Save", class: "ambl-button" %>
     <% end %>
   </div>
 </div>
