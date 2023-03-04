@@ -8,14 +8,16 @@
                 <% @my_bookmarks.each_with_index do |bookmark, index| %>
                     <div class="bookmark-card-header">
                       <div class="bookmark-card-body"><strong>Interest <%=  index + 1 %>:</strong></div>
-                        <h2 class="card-title"> <strong><%= bookmark.interest.name.capitalize %> </strong></h2>
-                    <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                        <h2 class="card-title"> <strong><%= bookmark.interest.name.capitalize %> </strong></h2><br>
+                    <i class="fa-solid fa-trash-can"><%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></i>
                       </div><br>
           <% end %>
           <br>
           <br>
-          <%= link_to "Add", bookmarks_new_path, class: "ambl-button" %>
-          <%= link_to "Done", root_path, class: "ambl-button" %>
+          <% if @my_bookmarks.count < 3 %>
+          <i class="fa-solid fa-plus"><%= link_to "Add", bookmarks_new_path, class: "ambl-button" %></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <% end %>
+          <i class="fa-solid fa-thumbs-up"><%= link_to "Done", root_path, class: "ambl-button" %></i>
       </div>
     </div>
   </div>
