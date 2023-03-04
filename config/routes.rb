@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     # registrations: 'users/registrations',
     # get 'settings' => 'users/sessions#settings'
 
-    devise_scope :user do
+  devise_scope :user do
     get 'settings' => 'users/registrations#settings'
   end
   root to: "pages#home"
@@ -31,9 +31,19 @@ Rails.application.routes.draw do
 
   resources :notifications, only: [:create, :show]
 
-  resources :places, only: [:show] do
+  resources :places, only: [:show, :index] do
     member do
       get :directions
+      post 'toggle_favorite', to: "places#toggle_favorite"
+
     end
   end
+
+  # resources :places, only: :index do
+  #   member do
+  #     post 'toggle_favorite', to: "places#toggle_favorite"
+  #   end
+  # end
+
+
 end

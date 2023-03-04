@@ -1,18 +1,22 @@
-<div class="my-3"
+<div class="my-1"
       data-controller="map"
       id='map'
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       data-map-marker-value="<%= @marker.to_json %>"
-      style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
+      style='width: 100%; height: 500px; border: 0.5px solid grey'>
+</div>
+
 <div class="row">
-<div class="col-4 mb-3">
-      <div class="card", style="position: relative">
-    <div class="card-body">
-          <h5 class="card-title"><%= @place.name %></h5>
-          <p class="card-text"><%= @place.address %><p>
-          <div class="div", style="display: inline-block">
-<%= link_to "Take me there", bookmarks_new_path, class: "ambl-button mr-3" %>
-  </div>
+
+  <div class="col-md-4 mb-4">
+    <div class="map-card-body">
+      <h5 class="card-place-title"><%= @place.name %></h5>
+      <p class="card-text"><%= @place.address %><p>
+      <p class="card-text"><%= @place.google_rating %><p>
+      <div style="display: inline-block">
+        <%= link_to "Save to favorite", toggle_favorite_place_path(@place), data: {"turbo-method": :post}, class: "ambl-button mr-3"%>
+        <%= link_to "Not this time", root_path, class: "ambl-button mr-3" %>
       </div>
     </div>
+  </div>
 </div>
