@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     # registrations: 'users/registrations',
     # get 'settings' => 'users/sessions#settings'
 
-    devise_scope :user do
+  devise_scope :user do
     get 'settings' => 'users/registrations#settings'
   end
   root to: "pages#home"
