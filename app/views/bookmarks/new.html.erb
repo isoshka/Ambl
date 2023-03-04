@@ -6,8 +6,8 @@
       </div>
 
       <%= simple_form_for @bookmark do |f| %>
-        <%= f.association :interest, prompt: "Select an interest", label:'Choose from the list below:',   priority: ['cafe', 'cocktail-bar', 'nightclub', 'ramen', 'bookshop', 'flower shop', 'music shop'] %>
-        <%= f.button :submit, "Save", class: "ambl-button" %>
+        <%= f.association :interest, prompt: "Select an interest",  label:'Choose a unique interest:' %>
+          <%= f.button :submit, "Save", class: "ambl-button" %>
       <% end %>
 </div>
 

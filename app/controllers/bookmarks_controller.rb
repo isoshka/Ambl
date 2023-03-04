@@ -19,10 +19,12 @@ class BookmarksController < ApplicationController
     @my_bookmarks = Bookmark.where(user_id: current_user.id)
     if @my_bookmarks.length < 3
       @bookmark.user = current_user
+
       # @my_bookmarks.each do |bookmark|
-      #   not_unique = (bookmark.interest.id == new_bookmark_params[:interest_id].to_i)
-      #   return "Try another one." if not_unique
+        # not_unique = (bookmark.interest.id == bookmark_params[:interest_id])
+        # return "Try another one." if not_unique
       # end
+
       if @bookmark.save
         redirect_to bookmarks_path
       else
