@@ -62,16 +62,15 @@ export default class extends Controller {
         .addTo(this.map);
     });
 
-    #fitMapToMarkers() {
-      const bounds = new mapboxgl.LngLatBounds()
-      this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-      this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+//     #fitMapToMarkers() {
+//       const bounds = new mapboxgl.LngLatBounds()
+//       this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+//       this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
 
-  }
-}
+// }
+}}
 }
 // 1. in maps js controller target your take me there button
 // 2. on clicking that button the display: none argument is removed from mapbox-directions-instructions
 // 3. in your css file add a default display:none; to the mapbox—directions-instructions class.
 // id: “take-me-there”
-}
