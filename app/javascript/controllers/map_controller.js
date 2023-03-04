@@ -56,11 +56,11 @@ export default class extends Controller {
         this.direction.setDestination([this.markerValue.lng, this.markerValue.lat])
       });
 
-    this.markerValue.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([marker.lng, marker.lat])
-        .addTo(this.map);
-    });
+    // this.markerValue.forEach((marker) => {
+    //   new mapboxgl.Marker()
+    //     .setLngLat([marker.lng, marker.lat])
+    //     .addTo(this.map);
+    // });
 
 //     #fitMapToMarkers() {
 //       const bounds = new mapboxgl.LngLatBounds()

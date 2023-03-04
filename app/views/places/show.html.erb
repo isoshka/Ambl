@@ -13,6 +13,13 @@
       <h5 class="card-place-title"><%= @place.name %></h5>
       <p class="card-text"><%= @place.address %><p>
       <p class="card-text"><%= @place.google_rating %><p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
       <div style="display: inline-block">
         <%= link_to "Save to favorite", toggle_favorite_place_path(@place), data: {"turbo-method": :post}, class: "ambl-button mr-3"%>
         <%= link_to "Not this time", root_path, class: "ambl-button mr-3" %>
