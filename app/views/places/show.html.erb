@@ -7,9 +7,9 @@
 
 <div class="row">
 <%= link_to "Save to favorite", toggle_favorite_place_path(@place), data: {"turbo-method": :post}, class: "btn btn-primary"%>
-<div class="col-4 mb-3">
+<div class="col-md-4 mb-4">
       <div class="card", style="position: relative">
-    <div class="card-body">
+    <div class="map-card-body">
           <h5 class="card-title"><%= @place.name %></h5>
           <p class="card-text"><%= @place.address %><p>
           <div class="div", style="display: inline-block">
