@@ -74,3 +74,4 @@ export default class extends Controller {
 // 2. on clicking that button the display: none argument is removed from mapbox-directions-instructions
 // 3. in your css file add a default display:none; to the mapbox—directions-instructions class.
 // id: “take-me-there”
+}
