@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="container">
   <div class="my-3"
     data-controller="map"
@@ -20,8 +22,13 @@
           </div>
           <ul class="list-group list-group-flush">
             <span class="badge badge-primary">Address</span> <li class="list-group-item" ><%= place.address %></li>
-            <span class="badge badge-primary">Rating</span> <li class="list-group-item"><%= place.google_rating %></li>
-          </ul>
+            <span class="badge badge-primary">Rating</span>
+<li class="list-group-item">
+  <% rounded_rating = place.google_rating.round %>
+  <% rounded_rating.times do %>
+    <span class="fa fa-star checked" style="display: inline-block; color: black;"></span>
+  <% end %>
+</li>
           <%#= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
         </div>
       </div>

@@ -19,6 +19,7 @@ class PlacesController < ApplicationController
         lng: place.lng
       }
     end
+
   end
 
 
