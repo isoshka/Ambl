@@ -47,7 +47,7 @@ class BookmarksController < ApplicationController
       1.0 # 1km
     else
       5.0 # fallback to 3km
-    end
+  end
 
     @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
     # # get the nearby bookmarks
