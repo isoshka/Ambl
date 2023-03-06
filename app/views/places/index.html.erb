@@ -2,10 +2,10 @@
 
 <div class="container">
   <div class="my-3"
-    data-controller="map"
+    data-controller="fav-map"
     id='map'
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-    data-map-marker-value="<%= @markerfav.to_json %>"
+    data-fav-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+    data-fav-map-markers-value="<%= @markerfav.to_json %>"
     style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
 
   <div class="row">
