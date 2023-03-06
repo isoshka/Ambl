@@ -19,9 +19,7 @@ class PlacesController < ApplicationController
         lng: place.lng
       }
     end
-
   end
-
 
   def show
     @place = Place.find(params[:id])
@@ -37,5 +35,4 @@ class PlacesController < ApplicationController
 
     redirect_to places_url, notice: "Place was successfully deleted."
   end
-
 end
