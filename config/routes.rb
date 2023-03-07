@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'bookmarks/new'
   get 'users/new'
   devise_for :users
-    # registrations: 'users/registrations',
-    # get 'settings' => 'users/sessions#settings'
+  # registrations: 'users/registrations',
+  # get 'settings' => 'users/sessions#settings'
 
   # devise_scope :user do
   #   get 'settings' => 'users/registrations#settings'
@@ -36,7 +36,6 @@ Rails.application.routes.draw do
     member do
       get :directions
       post 'toggle_favorite', to: "places#toggle_favorite"
-
     end
   end
 
@@ -45,6 +44,4 @@ Rails.application.routes.draw do
   #     post 'toggle_favorite', to: "places#toggle_favorite"
   #   end
   # end
-
-
 end
