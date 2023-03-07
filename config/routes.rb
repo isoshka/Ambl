@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/settings'
   get 'places/new'
   get 'interests/new'
   get 'bookmarks/new'
@@ -7,17 +8,17 @@ Rails.application.routes.draw do
     # registrations: 'users/registrations',
     # get 'settings' => 'users/sessions#settings'
 
-  devise_scope :user do
-    get 'settings' => 'users/registrations#settings'
-  end
+  # devise_scope :user do
+  #   get 'settings' => 'users/registrations#settings'
+  # end
   root to: "pages#home"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  # get "/settings", to: "users#settings"
+  resources :users, only: [:update]
+  get "/settings", to: "users#settings"
 
   resources :bookmarks, only: [:create] do
     collection do

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="flex-parent jc-center mb-6">
+    <h1><i class="fa-1x fa-sharp fa-solid fa-gear"></i> Personal Settings</h1>
+  </div>
+    <div>
+      <%= "_" *40 %>
+    </div>
+
+<div class="container">
+  <%= simple_form_for(current_user, html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="container">
+    <%= f.input :frequency, collection: User::FREQUENCY, as: :radio_buttons, item_wrapper_class: "tag-item", input_html: { class: "tag-selector" }, label:'How often would you like to be notified:' %>
+    <%= f.input :distance, collection: User::DISTANCE, as: :radio_buttons, item_wrapper_class: "tag-item", input_html: { class: "tag-selector" },label:'How far should the location be:' %>
+    </div>
+
+<div class="flex-parent jc-center">
+  <div class="form-actions">
+    <%= f.button :submit, "Save", class: "ambl-click-2" %>
+      </div>
+  <% end %>
+</div>
+  <div class="cover">
+  </div>
