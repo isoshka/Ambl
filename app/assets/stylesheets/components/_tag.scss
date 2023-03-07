@@ -87,6 +87,14 @@
   border-color: #62DDF5;
 }
 
-.form-check-label collection_radio_buttons {
+.form-check-label collection_radio_buttons + label {
   color: black
+}
+
+#bookmark_interest_ramen + label:before {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+  content: '\e4c6';
+  font-weight: 900;
+  font-size: 16px;
+  color: rgb(12, 12, 12);
 }
