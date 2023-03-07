@@ -1,29 +1,31 @@
-<div class="container">
+<div class="container everything-centered">
   <div class="flex-parent jc-center mb-6">
     <h1><i class="fa-1x fa-sharp fa-solid fa-gear"></i> Personal Settings</h1>
   </div>
-    <div>
+    <div class="bottom-spacing" >
       <%= "_" *40 %>
     </div>
 
-  <div class="container">
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),   html: { method: :put }) do |f| %>
-    <%= f.error_notification %>
+<div class="container">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
 
-    <div class="container" p style="color:purple>
-      <%= f.input :frequency, collection: User::FREQUENCY, as: :radio_buttons,  item_wrapper_class: "tag-item", input_html: { class: "tag-selector" }, label:'How often  would you like to be notified:' %>
-      <%= f.input :distance, collection: User::DISTANCE, as: :radio_buttons,  item_wrapper_class: "tag-item", input_html: { class: "tag-selector" },label:'How far   should the location be:' %>
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-    <%= f.input :current_password,
+  <div class="container everything-centered">
+    <%= f.input :frequency, collection: User::FREQUENCY, as: :radio_buttons, item_wrapper_class: "tag-item", input_html: { class: "tag-selector" }, label:'How often would you like to be notified:' %>
+    <%= f.input :distance, collection: User::DISTANCE, as: :radio_buttons, item_wrapper_class: "tag-item", input_html: { class: "tag-selector" },label:'How far should the location be:' %>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation?
+%>
+  <p>Currently waiting confirmation for: <%= resource.
+unconfirmed_email %></p>
+<% end %>
+<%= f.input :current_password,
             hint: "We need your current password to confirm your changes", required: true, input_html: { autocomplete: "current-password" } %>
     </div>
   </div>
 </div>
 
-<div class="flex-parent jc-center">
-  <div class="form-actions">
+<div class="flex-parent jc-center ">
+  <div class="form-actions everything-centered">
     <%= f.button :submit, "Save", class: "ambl-click-2" %>
   </div>
   <% end %>

@@ -14,3 +14,13 @@ h2.new, .h2 {
   font-weight: 500;
   line-height: 1.2;
 }
+
+.everything-centered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-spacing{
+  margin: 0 0 1.5rem 0;
+}

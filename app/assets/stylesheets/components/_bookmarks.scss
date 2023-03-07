@@ -1,5 +1,4 @@
 .bookmark-card-body {
-  background-color: #e7e4e4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,8 +6,6 @@
   font-family: Sans-serif;
   color: black;
   padding: 5px;
-  border-radius: 10px;
-  border: 5px;
 }
 .bookmark-card-header{
   background-color: #e7e4e4;
@@ -21,4 +18,14 @@
   padding: 5px;
   border-radius: 10px;
   border: 5px;
+}
+.bookmark-inner{
+  font-size: 36px;
+  color: #775577;
+  font-family: dm serif display;
+  margin: none;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
 }
