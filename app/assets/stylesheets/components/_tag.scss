@@ -88,12 +88,36 @@
 }
 
 .form-check-label collection_radio_buttons + label {
-  color: black
+  color: black;
 }
 
 #bookmark_interest_ramen + label:before {
   font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
   content: '\e4c6';
+  font-weight: 900;
+  font-size: 16px;
+  color: rgb(12, 12, 12);
+}
+
+#bookmark_interest_cafe + label:before {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+  content: '\f0f4';
+  font-weight: 900;
+  font-size: 16px;
+  color: rgb(12, 12, 12);
+}
+
+#bookmark_interest_cocktail-bar + label:before {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+  content: '\f561';
+  font-weight: 900;
+  font-size: 16px;
+  color: rgb(12, 12, 12);
+}
+
+#bookmark_interest_nightclub + label:before {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+  content: '\f79f';
   font-weight: 900;
   font-size: 16px;
   color: rgb(12, 12, 12);
