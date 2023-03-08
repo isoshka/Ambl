@@ -9,16 +9,16 @@
     style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
 
   <div class="row">
-  <button type="button" class="btn btn-primary btn-sm">
+
+  <button type="button" class="btn btn-primary btn-sm;">
     Liked Places <span class="badge badge-light" style="color: black;"><%= @favorite_places.count %></span>
   </button>
 
     <% @favorite_places.each do |place| %>
       <div class="col-md-4 mb-4">
-        <div class="card" style="padding: 10px; border-radius: 10px;">
-          <div class="card-header">
-            <span class="badge badge-success">Name of place</span>
-            <%= content_tag :p, place.name, style: 'color: black;' %>
+        <div class="card" style="padding: 10px; border-radius: 10px; padding-top: 5px;">
+          <div class="card-header text-center">
+            <%= content_tag :p, place.name, style: 'color: black; font-size: 24px;' %>
           </div>
           <ul class="list-group list-group-flush">
             <span class="badge badge-primary">Address</span> <li class="list-group-item" ><%= place.address %></li>

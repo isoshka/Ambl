@@ -1,6 +1,6 @@
 <div class="container">
   <div class="flex-parent jc-center mb-6">
-    <h1><i class="fa-1x fa-sharp fa-solid fa-gear"></i> Personal Settings</h1>
+    <h1><i class="fa-1x fa-sharp fa-solid fa-gear"></i> Notification settings</h1>
   </div>
     <div>
       <%= "_" *40 %>
@@ -15,9 +15,10 @@
     <%= f.input :distance, collection: User::DISTANCE, as: :radio_buttons, item_wrapper_class: "tag-item", input_html: { class: "tag-selector" },label:'How far should the location be:' %>
     </div>
 
+
 <div class="flex-parent jc-center">
   <div class="form-actions">
-    <%= f.button :submit, "Save", class: "ambl-click-2" %>
+    <%= f.button :submit, "Set interests!", class: "btn btn-light btn-pill rounded-pill" %>
       </div>
   <% end %>
 </div>
