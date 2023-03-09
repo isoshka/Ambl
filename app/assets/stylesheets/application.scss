@@ -17,3 +17,18 @@
 @import "components/title";
 @import "components/navbar";
 @import "components/navbar";
+@import "components/bookmarks";
+@import "components/maps";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.index-place {
+  font-family: 'Roboto', sans-serif;
+
+}
