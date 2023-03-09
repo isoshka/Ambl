@@ -1,32 +1,38 @@
 <div class="container">
   <div class="flex-parent jc-center mb-6">
-    <div class="container everything-centered">
+    <div class="container everything-centered py-5">
       <div class="flex-parent jc-center mb-6 bottom-spacing ">
         <h1><i class="fa-1x fa-solid fa-bookmark"></i> Your Interests</h1>
       </div>
 
       <div>
         <div class="col-md-4 mb-4">
-          <% @my_bookmarks.each_with_index do |bookmark, index| %>
-            <div class="card" style="padding: 10px; border-radius: 10px">
-              <div class="card-header text-center">
-              <i class="fa-solid  <%= Interest::INTERESTS[bookmark.interest.name.to_sym] %>", style="color: #66347F; font-size: 2em;" ></i>
-                <%= content_tag :p, bookmark.interest.name.capitalize, style: 'color: #66347F; font-size: 24px;' %>
-                <%= link_to(bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) do %>
-                  <i class="fa-solid fa-trash-can" style="color: black;"></i>
-                <% end %>
+            <% if @my_bookmarks.empty? %>
+            <div class="text-center my-5">
+            <p class="fs-1"><i class="fa-2x fa-regular fa-face-meh-blank"></i></p>
+              <h2 class="fs-1"><em><strong>No interests chosen yet...</strong></em></h2>
               </div>
-            </div>
-            <br>
-          <% end %>
+            <% end %>
+            <% @my_bookmarks.each_with_index do |bookmark, index| %>
+              <div class="card position-relative" style="padding: 10px; border-radius: 10px">
+                <div class="card-header text-center">
+                <i class="fa-solid  <%= Interest::INTERESTS[bookmark.interest.name.to_sym] %>", style="color: #66347F; font-size: 2em;" ></i>
+                  <%= content_tag :p, bookmark.interest.name.capitalize, style: 'color: #66347F; font-size: 24px;' %>
+                  <%= link_to(bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "position-absolute top-0 end-0 py-1 px-2") do %>
+                    <i class="fa-solid fa-xmark" style="color: black;"></i>
+                  <% end %>
+                </div>
+              </div>
+              <br>
+            <% end %>
         </div>
       </div>
 
       <div class="justify-content: space-between">
         <% if @my_bookmarks.count < 3 %>
-        <%= link_to "Add", bookmarks_new_path, class:"btn btn-light btn-pill rounded-pill" %>
+        <%= link_to "Add", bookmarks_new_path, class:"btn btn-light btn-pill rounded-pill btn-lg mt-3" %>
         <% end %>
-        <%= link_to "Done", root_path, class:"btn btn-light btn-pill rounded-pill" %>
+        <%= link_to "Done", root_path, class:"btn btn-light btn-pill rounded-pill btn-lg mt-3" %>
       </div>
     </div>
   </div>
