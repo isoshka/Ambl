@@ -1,4 +1,6 @@
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="mapshow" data-controller="location">
 
 <div class="container index-place">
   <div class="my-3"
@@ -28,7 +30,7 @@
                 <% rounded_rating.times do %>
                   <span class="fa fa-star checked" style="display: inline-block; color: gold;"></span>
                 <% end %>
-                   <%= link_to "Details", place_path(place), class: "ambl-button mr-3" %>
+                   <%= link_to "Details", place_path(place), class: "ambl-button mr-3", style: "float:right; padding-bottom: 0" %>
               </li>
 
           <%#= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
@@ -39,7 +41,7 @@
 </div>
 
 <img id="gif" src="/assets/walkingif.gif" style="display:none" />
-
+</div>
 
 <style>
 @media only screen and (max-width: 400px) {
