@@ -16,10 +16,12 @@
                             as: :check_boxes,
                             item_wrapper_class: "tag-item",
                             collection:Interest.all.pluck(:name),
+                            label: "Popular Interests",
                             input_html: { class: "tag-selector" } %>
           <%= f.input :interest,
                             as: :check_boxes,
                             item_wrapper_class: "tag-item",
+                            label: "others",
                             collection: ["Museums", "Restaurants", "Fast Food", "Billiards", "Tennis", "Pool", "Game Center"],
                             input_html: { class: "tag-selector" } %>
         </div>
