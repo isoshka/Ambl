@@ -29,3 +29,14 @@
   padding-bottom: 4px;
   padding-left: 8px;
 }
+
+.bottom-spacing{
+  margin: 0 0 1.5rem 0;
+}
+
+.everything-centered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
