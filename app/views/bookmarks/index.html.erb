@@ -11,7 +11,9 @@
             <div class="card" style="padding: 10px; border-radius: 10px">
               <div class="card-header text-center">
                 <%= content_tag :p, bookmark.interest.name.capitalize, style: 'color: black; font-size: 24px;' %>
-                <i class="fa-solid fa-trash-can" style="color: black;"></i><%= link_to "", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                <%= link_to(bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) do %>
+                  <i class="fa-solid fa-trash-can" style="color: black;"></i>
+                <% end %>
               </div>
             </div>
             <br>
