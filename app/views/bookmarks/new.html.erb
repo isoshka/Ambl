@@ -10,26 +10,20 @@
   <div class="flex-parent jc-center mb-6">
     <div class="container">
       <%= simple_form_for @bookmark do |f| %>
-        <div>
-        <br>
+              <%= f.input :interest,
+                          as: :check_boxes,
+                          item_wrapper_class: "tag-item",
+                          collection: Interest.all.pluck(:name),
+                          label: "Popular Interests",
+                          input_html: { class: "tag-selector" } %>
           <%= f.input :interest,
                             as: :check_boxes,
                             item_wrapper_class: "tag-item",
-                            collection:Interest.all.pluck(:name),
-                            label: "Popular Interests",
-                            input_html: { class: "tag-selector" } %>
-          <%= f.input :interest,
-                            as: :check_boxes,
-                            item_wrapper_class: "tag-item",
-                            label: "others",
+                            label: "Others",
                             collection: ["Interior", "Museums", "Restaurants", "Fast Food", "Billiards", "Tennis", "Pool", "Game Center"],
                             input_html: { class: "tag-selector" } %>
-        </div>
-    </div>
-
-  </div>
-    <div class="container">
-        <%= f.button :submit, "Save", class: "btn btn-light btn-pill rounded-pill" %>
+              <%= f.button :submit, "Save", class: "btn btn-light btn-pill rounded-pill" %>
       <% end %>
     </div>
+  </div>
 </div>
