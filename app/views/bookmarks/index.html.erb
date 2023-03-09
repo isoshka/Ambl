@@ -19,9 +19,9 @@
       </div>
 
       <% if @my_bookmarks.count < 3 %>
-      <i class="fa-solid fa-plus"><%= link_to "Add", bookmarks_new_path, class: "ambl-button" %></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <i class="fa-solid fa-plus"><%= link_to "Add", bookmarks_new_path, class: "ambl-button mr-3" %></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <% end %>
-      <i class="fa-solid fa-thumbs-up"><%= link_to "Done", root_path, class: "ambl-button" %></i>
+      <i class="fa-solid fa-thumbs-up"><%= link_to "Done", root_path, class: "ambl-button mr-3" %></i>
     </div>
   </div>
 </div>
