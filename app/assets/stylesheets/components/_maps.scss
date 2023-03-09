@@ -36,3 +36,10 @@
 .hidden{
   display: none;
 }
+
+.everything-centered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
