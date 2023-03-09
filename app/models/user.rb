@@ -9,4 +9,5 @@ class User < ApplicationRecord
 
   has_one_attached :photo
   acts_as_favoritor
+  has_many :bookmarks, dependent: :destroy
 end
