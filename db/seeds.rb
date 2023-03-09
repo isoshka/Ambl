@@ -59,7 +59,7 @@ puts "Created 4 unique users, one for each member of our team"
 
 # INTERESTS
 
-interests = %w(cafe cocktail-bar nightclub ramen)
+interests = %w(cafe cocktail-bar nightclub ramen design-store)
 
 interests.length.times do |i|
   Interest.create!(
