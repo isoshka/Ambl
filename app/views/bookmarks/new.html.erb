@@ -16,26 +16,20 @@
                             as: :check_boxes,
                             item_wrapper_class: "tag-item",
                             collection:Interest.all.pluck(:name),
+                            label: "Popular Interests",
+                            input_html: { class: "tag-selector" } %>
+          <%= f.input :interest,
+                            as: :check_boxes,
+                            item_wrapper_class: "tag-item",
+                            label: "others",
+                            collection: ["Interior", "Museums", "Restaurants", "Fast Food", "Billiards", "Tennis", "Pool", "Game Center"],
                             input_html: { class: "tag-selector" } %>
         </div>
     </div>
-      <div class="container">
-        <div>
-          <body.new p style="color:purple" ><%= "." *1 %></body.new>
-          </div>
-            <div class="container">
-              <i class="fa-2x fa-solid fa-guitar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-              <i class="fa-2x fa-solid fa-arrows-down-to-people">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-              <i class="fa-2x fa-solid fa-book">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-              <i class="fa-2x fa-solid fa-landmark">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i>
-            </div>
-      </div>
-              <div>
-                <body.new p style="color:purple" ><%= "." *1 %></body.new>
-              </div>
+
   </div>
-    <div>
-        <%= f.button :submit, "Save", class: "ambl-button" %>
+    <div class="container">
+        <%= f.button :submit, "Save", class: "btn btn-light btn-pill rounded-pill" %>
       <% end %>
     </div>
 </div>
