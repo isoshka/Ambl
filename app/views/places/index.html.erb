@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="container">
+<div class="container index-place">
   <div class="my-3"
     data-controller="fav-map"
     id='map'
@@ -9,16 +9,16 @@
     style='width: 100%; height: 300px; border: 0.5px solid grey'></div>
 
   <div class="row">
-  <button type="button" class="btn btn-primary btn-sm">
+
+  <button type="button" class="btn btn-primary btn-sm;">
     Liked Places <span class="badge badge-light" style="color: black;"><%= @favorite_places.count %></span>
   </button>
 
     <% @favorite_places.each do |place| %>
       <div class="col-md-4 mb-4">
-        <div class="card" style="padding: 10px; border-radius: 10px;">
-          <div class="card-header">
-            <span class="badge badge-success">Name of place</span>
-            <%= content_tag :p, place.name, style: 'color: black;' %>
+        <div class="card" style="padding: 10px; border-radius: 10px; padding-top: 5px;">
+          <div class="card-header text-center">
+            <%= content_tag :p, place.name, style: 'color: black; font-size: 24px;' %>
           </div>
           <ul class="list-group list-group-flush">
             <span class="badge badge-primary">Address</span> <li class="list-group-item" ><%= place.address %></li>
@@ -28,13 +28,18 @@
                 <% rounded_rating.times do %>
                   <span class="fa fa-star checked" style="display: inline-block; color: gold;"></span>
                 <% end %>
+                   <%= link_to "Details", place_path(place), class: "ambl-button mr-3" %>
               </li>
+
           <%#= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+
+<img id="gif" src="/assets/walkingif.gif" style="display:none" />
+
 
 <style>
 @media only screen and (max-width: 400px) {

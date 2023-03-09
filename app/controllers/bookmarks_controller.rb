@@ -58,9 +58,6 @@ class BookmarksController < ApplicationController
         to: current_user.phone_number,
         body: message
       )
-      sleep(5)
-      flash[:notice] = "A notification was sent to your phone and on the page."
-
     end
     # render the nearby places
     render json: @places

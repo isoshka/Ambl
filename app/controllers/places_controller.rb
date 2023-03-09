@@ -11,6 +11,7 @@ class PlacesController < ApplicationController
   end
 
   def index
+    @placespictures = []
     @places = Place.all
     @favorite_places = current_user.favorited_by_type('Place')
     @markerfav = @favorite_places.map do |place|
