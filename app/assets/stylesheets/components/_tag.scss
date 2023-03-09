@@ -122,3 +122,11 @@
   font-size: 16px;
   color: rgb(12, 12, 12);
 }
+
+#bookmark_interest_interior + label:before {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free';
+  content: '\f6c0';
+  font-weight: 900;
+  font-size: 16px;
+  color: rgb(12, 12, 12);
+}
