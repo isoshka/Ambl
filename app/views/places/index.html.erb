@@ -28,7 +28,9 @@
                 <% rounded_rating.times do %>
                   <span class="fa fa-star checked" style="display: inline-block; color: gold;"></span>
                 <% end %>
+                   <%= link_to "Details", place_path(place), class: "ambl-button mr-3" %>
               </li>
+
           <%#= button_to "Delete", place, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
         </div>
       </div>

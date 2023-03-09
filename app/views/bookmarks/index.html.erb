@@ -7,19 +7,16 @@
 
       <div>
         <% @my_bookmarks.each_with_index do |bookmark, index| %>
-        <div class="bookmark-card-header">
-          <div class="bookmark-card-body">
-            <%# <i class#="fa-solid <%=Interest::INTERESTS[bookmark.interest.name.to_sym] %>
-          </div>
-            <h2 class="bookmark-inner"> <strong><%= bookmark.interest.name.capitalize %> </strong></h2><br>
-            <i class="fa-solid fa-trash-can"><%= link_to "", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></i>
+        <div class="col-md-4 mb-4">
+           <div class="card" style="padding: 10px; border-radius: 10px">
+            <div class="card-header text-center">
+              <%= content_tag :p, bookmark.interest.name.capitalize, style: 'color: black; font-size: 24px;' %>
+              <i class="fa-solid fa-trash-can" style="color: black;"></i><%= link_to "", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+            </div>
+            <% end %>
         </div>
-        <br>
-        <% end %>
       </div>
-
-      <br>
-      <br>
+      </div>
 
       <% if @my_bookmarks.count < 3 %>
       <i class="fa-solid fa-plus"><%= link_to "Add", bookmarks_new_path, class: "ambl-button" %></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

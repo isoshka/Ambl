@@ -25,9 +25,9 @@
                 <span class="fa fa-star checked" style="display: inline-block; color: gold;"></span>
               <% end %>
               </li>
-          <div style="display: flex; justify-content: center; padding: 20px 0;">
+          <div style="display: flex; justify-content: center; padding: 10px">
             <%= link_to "Save", toggle_favorite_place_path(@place), data: {"turbo-method": :post}, class: "ambl-button mr-3", size: "small" %>
-            <%= link_to "Go", "https://www.google.com/maps/dir/35.6324805,139.7045753/#{@place.lat},#{@place.lng}", target: "_blank", rel: "noopener", class: "ambl-button mr-3", size: "small" %>
+            <%= link_to "Go", "https://www.google.com/maps/dir/35.6338813,139.7072681/#{@place.lat},#{@place.lng}", target: "_blank", rel: "noopener", class: "ambl-button mr-3", size: "small" %>
             <%= link_to "Skip", root_path, class: "ambl-button mr-3", size: "small" %>
           </div>
       </div>
