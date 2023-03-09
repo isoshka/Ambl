@@ -4,11 +4,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     console.log("Testing controller")
-    const intervalID = document.addEventListener("keyup", (event) => {
-      if (event.key == "/"){
-        this.geolocate()
-      }
-    })
+    // const intervalID = document.addEventListener("keyup", (event) => {
+    //   if (event.key == "/"){
+    //     this.geolocate()
+    //   }
+    // })
 
 
   }
